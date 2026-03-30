@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { db } from '../../lib/firebase';
 import {
-  collection, query, where, orderBy, onSnapshot,
-  addDoc, serverTimestamp, getDocs, doc, getDoc, updateDoc
+  collection, query, orderBy, onSnapshot,
+  addDoc, serverTimestamp, getDocs, doc, updateDoc
 } from 'firebase/firestore';
 import { getOrCreateChatRoom } from '../../lib/gameLogic';
 import toast from 'react-hot-toast';

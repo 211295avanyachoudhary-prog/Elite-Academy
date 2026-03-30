@@ -172,7 +172,7 @@ export default function StudyLogger() {
                 <button
                   key={h}
                   type="button"
-                  className={`quick-btn ${hours == h ? 'active' : ''}`}
+                  className={`quick-btn ${hours === h ? 'active' : ''}`}
                   onClick={() => setHours(String(h))}
                 >
                   {h}h

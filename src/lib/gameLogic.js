@@ -3,7 +3,7 @@
 import { db } from './firebase';
 import {
   doc, collection, getDoc, getDocs, setDoc, updateDoc,
-  query, where, orderBy, limit, serverTimestamp, increment, runTransaction
+  query, where, orderBy, limit, serverTimestamp, increment
 } from 'firebase/firestore';
 
 export const CLASS_ORDER = ['D', 'C', 'B', 'A'];
