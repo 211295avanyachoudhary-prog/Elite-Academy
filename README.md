@@ -30,49 +30,9 @@ elite-academy/
 └── .env.example
 ```
 
----
 
-## 🔥 STEP 1: Firebase Setup
 
-### A — Create Firebase Project
-1. Go to https://console.firebase.google.com
-2. Click "Add project" → name it elite-academy → Create
 
-### B — Enable Authentication
-1. Sidebar → Authentication → Get started
-2. Email/Password → Enable → Save
-
-### C — Create Firestore
-1. Sidebar → Firestore Database → Create database
-2. Start in production mode → choose region → Enable
-3. Go to Rules tab → paste contents of firestore.rules → Publish
-
-### D — Enable Storage
-1. Sidebar → Storage → Get started → production mode → Done
-2. Rules tab → paste storage.rules → Publish
-
-### E — Get Config Keys
-1. Gear icon ⚙️ → Project settings
-2. Your apps → Web icon (</>)
-3. Register app → copy the firebaseConfig values
-
----
-
-## ⚙️ STEP 2: Local Setup
-
-```bash
-cd elite-academy
-npm install
-cp .env.example .env
-# Edit .env with your Firebase values
-npm start
-```
-
-Open http://localhost:3000 — done!
-
----
-
-## 🗄️ Database Schema
 
 ### users/{uid}
 ```
@@ -161,15 +121,6 @@ vercel --prod
 🌧️ Rain | 🌊 Ocean | 📡 White Noise | 🌫️ Brown Noise | 🌿 Nature | ☕ Café
 
 ---
-
-## 🛠️ Troubleshooting
-
-- **Blank page on Vercel** → Check all 6 env variables are set
-- **Auth errors** → Enable Email/Password in Firebase Auth
-- **Messages not loading** → Publish Firestore rules
-- **Photo upload fails** → Publish Storage rules
-- **Classroom not assigning** → Check Firestore write permissions
-
 ---
 
 *Built for Class A students. The rest are just catching up.* 👑
