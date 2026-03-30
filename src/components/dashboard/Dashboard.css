@@ -1,0 +1,39 @@
+.dashboard { padding: 16px; display: flex; flex-direction: column; gap: 16px; max-width: 600px; margin: 0 auto; }
+.loading-screen { display: flex; align-items: center; justify-content: center; height: 60vh; }
+.spinner-lg { width: 40px; height: 40px; border: 3px solid rgba(0,255,255,0.2); border-top-color: #00ffff; border-radius: 50%; animation: spin 0.8s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.dash-hero { background: linear-gradient(135deg, rgba(0,20,40,0.9), rgba(0,10,20,0.95)); border: 1px solid rgba(0,255,255,0.2); border-radius: 16px; padding: 24px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; }
+.dash-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 50%, rgba(0,255,255,0.05) 0%, transparent 60%); pointer-events: none; }
+.hero-left { display: flex; align-items: center; gap: 16px; }
+.user-avatar { width: 60px; height: 60px; border-radius: 50%; border: 2px solid #00ffff; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; color: #00ffff; background: rgba(0,0,0,0.4); flex-shrink: 0; }
+.user-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.hero-info h2 { font-family: 'Orbitron', sans-serif; font-size: 1rem; color: #fff; margin: 0 0 6px; letter-spacing: 1px; }
+.class-badge { display: inline-block; border: 1px solid; padding: 2px 10px; border-radius: 4px; font-family: 'Orbitron', sans-serif; font-size: 0.65rem; letter-spacing: 2px; margin-bottom: 4px; }
+.hero-info p { color: #4a5568; font-size: 0.8rem; margin: 0; }
+.hero-right { display: flex; gap: 20px; text-align: center; }
+.stat-big { display: flex; flex-direction: column; gap: 2px; }
+.stat-number { font-family: 'Orbitron', sans-serif; font-size: 1.3rem; color: #fff; }
+.stat-label { font-size: 0.6rem; letter-spacing: 2px; color: #4a5568; }
+.progress-section { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 16px; }
+.progress-header { display: flex; justify-content: space-between; font-size: 0.8rem; color: #718096; margin-bottom: 10px; }
+.progress-bar { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 3px; transition: width 0.6s ease; }
+.quick-actions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.action-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 16px 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: all 0.2s; color: #718096; font-family: 'Rajdhani', sans-serif; font-size: 0.75rem; letter-spacing: 0.5px; }
+.action-card:hover { border-color: rgba(0,255,255,0.3); color: #00ffff; background: rgba(0,255,255,0.05); transform: translateY(-2px); }
+.action-icon { font-size: 1.5rem; }
+.section-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 20px; }
+.section-title { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; letter-spacing: 2px; color: #4a9eff; margin: 0 0 16px; }
+.leaderboard-list { display: flex; flex-direction: column; gap: 12px; }
+.lb-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.lb-rank { font-family: 'Orbitron', sans-serif; font-size: 0.8rem; width: 24px; }
+.lb-avatar { width: 32px; height: 32px; border-radius: 50%; background: rgba(0,255,255,0.1); border: 1px solid rgba(0,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; overflow: hidden; flex-shrink: 0; }
+.lb-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.lb-name { flex: 1; color: #e2e8f0; font-size: 0.9rem; }
+.lb-class { font-family: 'Orbitron', sans-serif; font-size: 0.65rem; letter-spacing: 1px; }
+.lb-pts { color: #4a9eff; font-size: 0.85rem; font-weight: 600; }
+.log-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.log-subject { flex: 1; color: #e2e8f0; }
+.log-hours { color: #718096; font-size: 0.85rem; }
+.log-pts { color: #00ffff; font-size: 0.85rem; }
+.empty-state { color: #4a5568; font-size: 0.85rem; text-align: center; padding: 8px; }

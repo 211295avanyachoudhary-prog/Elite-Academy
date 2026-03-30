@@ -1,0 +1,86 @@
+/* 👤 Profile Styles */
+.profile-page { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+
+.profile-layout { display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: start; }
+
+.profile-left { display: flex; flex-direction: column; gap: 16px; }
+
+.identity-card { display: flex; flex-direction: column; gap: 20px; text-align: center; }
+
+.avatar-section { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+
+.avatar-wrapper { position: relative; width: 100px; height: 100px; }
+
+.profile-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid var(--neon-blue); box-shadow: 0 0 20px rgba(0,212,255,0.3); }
+
+.avatar-upload-btn {
+  position: absolute; bottom: 2px; right: 2px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; cursor: pointer;
+  transition: all 0.2s;
+}
+.avatar-upload-btn:hover { background: var(--neon-blue); }
+
+.edit-form { display: flex; flex-direction: column; gap: 16px; text-align: left; }
+.edit-field { display: flex; flex-direction: column; gap: 6px; }
+.edit-label { font-family: var(--font-display); font-size: 10px; letter-spacing: 2px; color: var(--text-muted); }
+.edit-actions { display: flex; gap: 10px; }
+
+.profile-info { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.profile-username { font-family: var(--font-display); font-size: 22px; font-weight: 900; color: var(--text-primary); letter-spacing: 2px; }
+.profile-bio { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+.edit-btn { font-size: 12px; padding: 8px 16px; }
+
+.profile-meta { display: flex; flex-direction: column; gap: 12px; padding-top: 16px; border-top: 1px solid var(--border-primary); text-align: left; }
+.meta-item { display: flex; align-items: center; gap: 12px; }
+.meta-icon { font-size: 20px; }
+.meta-label { font-family: var(--font-display); font-size: 10px; letter-spacing: 2px; color: var(--text-muted); }
+.meta-value { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-top: 2px; }
+
+/* Right side */
+.profile-right { display: flex; flex-direction: column; gap: 20px; }
+
+.stats-card, .achievements-card { padding: 24px; }
+
+.card-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--text-primary); margin-bottom: 20px; }
+
+.profile-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px; }
+
+.profile-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border-primary); border-radius: 10px; padding: 16px; text-align: center; }
+.pstat-value { font-family: var(--font-display); font-size: 24px; font-weight: 900; }
+.pstat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+.rank-progress { margin-top: 8px; }
+.rank-progress-header { display: flex; justify-content: space-between; font-family: var(--font-display); font-size: 11px; letter-spacing: 1px; color: var(--text-secondary); }
+
+/* Achievements */
+.achievements-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+
+.achievement-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border-primary);
+  border-radius: 10px;
+  padding: 14px 8px;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.achievement-item.unlocked {
+  background: rgba(0,212,255,0.05);
+  border-color: rgba(0,212,255,0.3);
+}
+
+.achievement-item.locked { opacity: 0.4; }
+
+.ach-icon { font-size: 24px; margin-bottom: 6px; }
+.ach-label { font-family: var(--font-display); font-size: 10px; font-weight: 700; letter-spacing: 1px; color: var(--text-primary); }
+.ach-desc { font-size: 10px; color: var(--text-muted); margin-top: 3px; }
+
+@media (max-width: 768px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+}
